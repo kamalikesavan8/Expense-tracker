@@ -26,7 +26,7 @@ function App() {
 
   const[text, setText] = useState("");
   const[amount, setAmount] = useState("");
-  const[category, setCategory] = useState("Food");
+  const[category, setCategory] = useState("");
   const[filter,setFilter] = useState("All");
 
   const amounts = transactions.map(t=>t.amount);
@@ -123,6 +123,7 @@ function App() {
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
+            <option value="">Select Category</option>
             <option value="Food">🍔 Food</option>
             <option value="Salary">💰 Salary</option>
             <option value="Travel">✈️ Travel</option>
